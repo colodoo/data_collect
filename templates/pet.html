@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{city}}</title>
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+</head>
+<body>
+<header class="bar bar-nav">
+  <h1 class="title">{{city}}</h1>
+</header>
+<div class="content">
+    {% for result in results %}
+  <div class="content-block-title">{{result.title}}</div>
+  <div class="card demo-card-header-pic">
+    <div valign="bottom" class="card-header color-white no-border no-padding">
+      <img class='card-cover' src="{{result.img}}" alt="">
+    </div>
+    <div class="card-content">
+      <div class="card-content-inner">
+        <p class="color-gray">发表于 {{result.date}}</p>
+        <p>{{result.article}}</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <a href="#" class="link">赞</a>
+      <a href="#" class="link">更多</a>
+    </div>
+  </div>
+    {% endfor %}
+</div>
+</body>
+</html>
